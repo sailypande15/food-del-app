@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/registration.css">
+</head>
+
+<body id="bckgrnd">
+     <div class="container mt-5">
+       
+        <div style="text-align: center;margin-bottom: 40px;">
+            <img src="/images/food_logo.jpeg" alt="logo" style="width:60px;">
+        </div>
+        <!-- Registration Form -->
+       
+         
+        <form style="width: 50%;margin: auto;">
+            <fieldset style="width: 50%;;margin: auto;">
+                <legend>User Registration</legend>
+                    <!-- User ID -->
+                    <div class="form-group" style="margin: auto;">
+                        <label for="userId">User ID</label>
+                        <input type="text" class="form-control form-control-sm" id="userId" placeholder="Enter User ID" required >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-sm" id="password" placeholder="Enter Password" required >
+                        <div style="font-size: x-small;color: rgb(105, 103, 103);">Passwords must be at least 6 characters.</div>
+                    </div>
+
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="password">User Details</label>
+                        <div class="input-group" >                
+                            <input type="text" class="form-control form-control-sm" id="firstName" placeholder="Enter First Name" required style="margin-right: 20px;">
+                            <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Enter Last Name" required >
+                        </div>  
+                    </div>
+                    
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter Address" required > </textarea>
+                    </div>
+                    <div class="form-group text-center">
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success btn-sm" style="width: 100%;">Register</button>
+                    </div>
+                    <div style="font-size: small;color: rgb(105, 103, 103);text-align: center;">Already have an account?<a href="/html/login.html">&nbspSign in</a></div>
+                </fieldset>
+        </form>
+   
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

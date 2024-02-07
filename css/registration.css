@@ -1,0 +1,35 @@
+.background-color-nav {
+    background-color: rgb(85, 222, 22);
+    font-weight: 28px;
+}
+#bckgrnd {
+    
+    background-image: url("/images/fooddelivery_background.jpg");
+    width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+  label {
+    font-size: small;
+  }
+  input {
+    width: 50%;
+  }
+  
+  a {
+    color: rgb(21, 20, 20);
+ }
+ fieldset {
+    padding: 20px;
+    border: 1px solid rgb(59, 79, 15);
+    background-color: white;
+    
+ }
+ legend {
+    text-align: center;
+    color: rgb(15, 15, 14);
+    font-weight: 600;
+    background-color: yellowgreen;
+    font-size: large;
+    width: 70%;
+ }

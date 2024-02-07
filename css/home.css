@@ -1,0 +1,18 @@
+.background-color-nav {
+    background-color: rgb(85, 222, 22);
+    font-weight: 28px;
+}
+#bckgrnd {
+    
+    background-image: url("/images/fooddelivery_background.jpg");
+    width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+  a {
+    color: rgb(21, 20, 20);
+ }
+ #shoppingCart p
+{
+  font-weight:600;
+}

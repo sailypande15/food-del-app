@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page - Food Delivery App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="/css/home.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/home.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      margin: 15px;
+    }
+  </style>
+</head>
+<body onload="createFoodItemList()" id="bckgrnd">
+    <header class="mb-3">
+        <nav class="navbar navbar-expand-sm background-color-nav ">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="/html/home.html">
+            <img src="/images/food_logo.jpeg" alt="logo" style="width:40px;">
+          </a>
+          
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/html/home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Restraurant</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Welcome <span id="userprofile"></span>!!</a></li>
+            <a  href="#">
+                <i class="fa fa-sign-out"></i> &nbsp;Log Out
+              </a>
+              <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px" aria-hidden="true"></i> Checkout [<span id="totalItemInCart"></span>]</a></li>
+          </ul>
+        </nav>
+    
+      </header>
+
+  <div class="p-0 m-0" style="width: 100%;" >
+    <div class=" container" style="width: 100%;">
+        <form class="form-inline">
+            <div class="mb-2" style="width: 70%;">
+                <input type="text" class="form-control" style="width: 100%" id="searchInput" placeholder="Enter your search" >
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" onclick="searchFoodItem()">Search</button>
+        </form>
+    </div>
+    <div style="padding: 3%;">
+
+        <div class="row"  style="width: 100%;">
+        <div class="col-md-10">
+
+            <div class="row" id="productList">
+     
+        
+                <!-- Repeat the following card structure for the remaining 11 cards -->
+          
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                              <div class="card">
+                                      <img src="/images/products/shawarma_wrap.jpg" class="card-img-top" alt="Card Image">
+                                      <div class="card-body">
+                                          <h5 class="card-title"style="padding-bottom: 20px;" >
+                                              <span style="float:left;padding-top: 5px;">Lassi Shop</span>
+                                              <span class="ratings" style="float: right;">4.5<span class="fa fa-star" style="margin-left: 5px;"></span>
+                                          </h5>
+                                          <p class="card-text" style="padding-bottom: 20px;" >
+                                              <span style="float: left;">Beverages,Shake...</span> 
+                                              <span style="float: right;">&#8377;450.00 For One</span>
+                                          </p>  
+                                          <a href="#" class="btn btn-primary"  data-productId="1234" onclick="addtocart(this)">Order Now</a>
+                                          
+                                      </div>
+                              </div>
+                  </div>
+              </div>
+               
+
+
+
+        </div>
+        <div class="col-md-2 b">
+            <h4 style="padding-bottom: 10px;">Shopping Cart</h4>
+            <div  id="shoppingCart">
+                <h5>Shoppin Cart is Empty</h5>
+            </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    
+    </div>
+

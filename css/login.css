@@ -1,0 +1,27 @@
+.background-color-nav {
+    background-color: rgb(85, 222, 22);
+    font-weight: 28px;
+}
+.background {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/fooddelivery_background.jpg");
+    width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
+ 
+  .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+   a {
+      color: rgb(21, 20, 20);
+   }

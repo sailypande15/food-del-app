@@ -1,0 +1,24 @@
+#bckgrnd {
+    
+    background-image: url("/images/fooddelivery_background.jpg");
+    width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+  a {
+    color: rgb(21, 20, 20);
+ }
+ .background-color-nav {
+    background-color: rgb(85, 222, 22);
+    font-weight: 28px;
+}
+h2 {
+ color: rgb(1, 38, 1);
+}
+.restaurant-form
+{
+    border: 1px solid rgb(21, 20, 20);
+}
+.checked {
+    color: orange;
+  }

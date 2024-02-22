@@ -27,12 +27,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Add Restraurant</a>
-        </li>
-      </ul>
+        </ul>
       <ul class="navbar-nav ml-auto">
-        <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+        <li style="margin-left: 10px;margin-right: 10px;"><a href="/html/register.html"><i class="fa fa-user-plus"></i> Sign Up</a></li>
         <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-sign-in"></i> Login</a></li>
       </ul>
     </nav>
@@ -43,6 +40,7 @@
     
       <div class="row">
         <div class="col-md-6 offset-md-3">
+          <h6 class="error" id="errorMsg"></h6>
           <div class="login-container">
             <h2 class="text-center">Login to Food Delivery App</h2>
             <form onsubmit="onclickOfButton()"  id="loginform" action="/html/home.html">
@@ -55,6 +53,7 @@
                 <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
               </div>
               <button type="button" class="btn btn-success btn-block" id="loginbtn" onclick="onclickOfButton();">Login</button>
+              <div style="font-size: small;color: rgb(105, 103, 103);text-align: center;padding-top: 2px;">New to application ?<a href="/html/register.html">&nbspSign Up</a></div>
             </form>
           </div>
         </div>

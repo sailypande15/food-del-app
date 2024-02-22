@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Delivery App - Login</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/addrestraurant.css">
+        <script type="text/javascript" src="/js/addRestraurant.js"></script>
+        <script type="text/javascript" src="/js/home.js"></script>
+        
+
+      </head>
+<body onload="redirectToLogin();">
+    <header>
+        <nav class="navbar navbar-expand-sm background-color-nav ">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="/html/home.html">
+            <img src="/images/food_logo.jpeg" alt="logo" style="width:40px;">
+          </a>
+          
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/html/home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+           
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Welcome <span id="userprofile"></span>!!</a></li>
+            <a  href="#" onclick="logout()">
+                <i class="fa fa-sign-out"></i> &nbsp;Log Out
+              </a>
+             
+          </ul>
+        </nav>
+    
+      </header>
+  <div class=" d-flex align-items-center justify-content-center" >
+    <div class="w-50 p-5" id="container-div">
+        <h2 class="mt-4 mb-4" style="text-align: center;">Add New Cuisine In Menu</h2>
+        <div class="row">
+            <div class="col">
+                       
+
+                        <div class="restaurant-form" style="padding: 30px;">
+                            <div class="form-group">
+                                <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+                                <div ><img id="myImg" src="#" width="100%" height="100%" style="padding-top: 30px;"></div>
+                            </div>
+                        
+                       
+                </div>
+            </div>
+            <div class="col"> 
+                <div class="form-group">
+                <label for="restaurantName">Food Item:</label>
+                <input type="text" class="form-control" id="foodName" placeholder="Enter cuisine Name" maxlength="64">
+                 </div>
+
+                <div class="form-group">
+                    <label for="location">Price</label>
+                    <input type="number" class="form-control" id="price" placeholder="Enter Price of cuisine">
+                </div>
+
+                <div class="form-group">
+                    <label for="cuisine">Type:</label>
+                    <input type="text" class="form-control" id="cuisineType" placeholder="Enter cuisine type">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" rows="4" placeholder="Enter cuisine description"></textarea>
+                </div>
+                <div class="form-group" id="ratings">
+                    <a  href="#" onclick="highlightThestar(this)"><span class="fa fa-star"></span></a>
+                    <a  href="#" onclick="highlightThestar(this)"><span class="fa fa-star"></span></a>
+                    <a  href="#" onclick="highlightThestar(this)"><span class="fa fa-star"></span></a>
+                    <a  href="#" onclick="highlightThestar(this)"><span class="fa fa-star"></span></a>
+                    <a  href="#" onclick="highlightThestar(this)"><span class="fa fa-star"></span></a>
+
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <button type="button" class="btn btn-success" onclick="addFoodItem();">Add Item</button>
+                </div></div>
+        </div>
+
+  </div>
+</div>
+ 
+</html>
+
+</body>
+</html>

@@ -35,13 +35,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Add Restraurant</a>
+            <span id="addRestraurant">
+            <li class="nav-item" >
+              <a class="nav-link" href="/html/addRestraurant.html">Add Restraurant</a>
             </li>
+           </span>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Welcome <span id="userprofile"></span>!!</a></li>
-            <a  href="#">
+            <a  href="#" onclick="logout()">
                 <i class="fa fa-sign-out"></i> &nbsp;Log Out
               </a>
               <li style="margin-left: 10px;margin-right: 10px;"><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px" aria-hidden="true"></i> Checkout [<span id="totalItemInCart"></span>]</a></li>
@@ -52,17 +54,16 @@
 
   <div class="p-0 m-0" style="width: 100%;" >
     <div class=" container" style="width: 100%;">
-        <form class="form-inline">
+        <div class="form-inline">
             <div class="mb-2" style="width: 70%;">
-                <input type="text" class="form-control" style="width: 100%" id="searchInput" placeholder="Enter your search" >
+                <input type="text" class="form-control" style="width: 100%" id="searchInput" placeholder="Enter your search" onkeypress="onclickOfEnter(event);" >
             </div>
-            <button type="submit" class="btn btn-primary mb-2" onclick="searchFoodItem()">Search</button>
-        </form>
+        </div>
     </div>
     <div style="padding: 3%;">
 
         <div class="row"  style="width: 100%;">
-        <div class="col-md-10">
+        <div class="col-md-9">
 
             <div class="row" id="productList">
      
@@ -93,13 +94,18 @@
 
 
         </div>
-        <div class="col-md-2 b">
+        <div class="col-md-3 ">
+             <div style="text-align: center; width: 100%;">
+              <h5 style="padding:10px; margin:0; background-color: yellowgreen;" id="totalAmtCart">Total :&#8377; 0</h5>
+            </div>
             
             <div style="text-align: center; width: 100%;">
-              <a href="/html/paymentGateway.html" class="btn btn-success btn-sm" style="width: 100%;">Procced To Pay</a>
+              <a href="/html/paymentGateway.html" onclick="addCartItemForPayment();" class="btn btn-success btn-sm" style="width: 100%;">Procced To Pay</a>
               </div>
             <div  id="shoppingCart">
                 <h5 style="padding-top: 50px;">Shoppin Cart is Empty</h5>
+         
+                                                
             </div>
 
             </div>

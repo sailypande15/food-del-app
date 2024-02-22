@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/registration.css">
+    <script type="text/javascript" src="/js/login.js"></script>
 </head>
 
 <body id="bckgrnd">
@@ -19,13 +20,14 @@
         <!-- Registration Form -->
        
          
-        <form style="width: 50%;margin: auto;">
+        <form style="width: 50%;margin: auto;" id="registrationForm"  action="/html/home.html">
             <fieldset style="width: 50%;;margin: auto;">
                 <legend>User Registration</legend>
+                <div class="error" id="registrationError"></div>
                     <!-- User ID -->
                     <div class="form-group" style="margin: auto;">
-                        <label for="userId">User ID</label>
-                        <input type="text" class="form-control form-control-sm" id="userId" placeholder="Enter User ID" required >
+                        <label for="userId">Email</label>
+                        <input type="text" class="form-control form-control-sm" id="userId" placeholder="Enter Email ID" required >
                     </div>
 
                     <!-- Password -->
@@ -43,6 +45,11 @@
                             <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Enter Last Name" required >
                         </div>  
                     </div>
+                    <div class="form-group">
+                        <input  type="checkbox" value="admin" style="width: 20px;" id="flexCheckChecked" checked>
+
+                        <label  for="flexCheckChecked">Is Admin </label>
+                      </div>
                     
                     <!-- Address -->
                     <div class="form-group">
@@ -51,7 +58,7 @@
                     </div>
                     <div class="form-group text-center">
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-success btn-sm" style="width: 100%;">Register</button>
+                    <button type="button" onclick="registerUser();" class="btn btn-success btn-sm" style="width: 100%;" >Register</button>
                     </div>
                     <div style="font-size: small;color: rgb(105, 103, 103);text-align: center;">Already have an account?<a href="/html/login.html">&nbspSign in</a></div>
                 </fieldset>

@@ -9,10 +9,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="/css/paymentgateway.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/paymentgateway.js"></script>
     
 </head>
 
-<body id="bckgrnd">
+<body id="bckgrnd" onload="loadCartItems()">
     <header class="mb-3">
         <nav class="navbar navbar-expand-sm background-color-nav ">
           <!-- Brand/logo -->
@@ -139,7 +140,7 @@
                                 <table style="width: 100%;">
                                     <tr style="font-size: large; font-weight: bold;">
                                         <td >Order Total</td>
-                                        <td style="text-align: right;">&#8377;1000</td>
+                                        <td style="text-align: right;" id="orderTotal">&#8377;0</td>
                                     </tr>
                                     
                                 </table>

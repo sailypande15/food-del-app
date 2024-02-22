@@ -33,3 +33,7 @@
     font-size: large;
     width: 70%;
  }
+ .error{
+   font-size: 15px;
+   color: red;
+  }

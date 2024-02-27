@@ -1,0 +1,27 @@
+body {
+    
+    font-size: 15px;
+  
+  }
+  #bckgrnd {
+    
+    background-image: url("/images/fooddelivery_background.jpg");
+    width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+  a {
+    color: rgb(21, 20, 20);
+ }
+  .jumbotron {
+    background-color: #2bdf55;
+    color: #fff;
+  }
+  .mission-section, .why-choose-section, .contact-section {
+    margin-top: 30px;
+  }
+  .bck-color {
+
+    background-color: #dcf1ba;
+
+  }

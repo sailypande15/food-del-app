@@ -2,7 +2,10 @@ let cartitems = [];
 
 function loadCartItems() { 
     cartitems = JSON.parse(sessionStorage.getItem("cartItems"));
-    document.getElementById('orderTotal').innerHTML= calculateTotal(cartitems)
+    let total =  calculateTotal(cartitems);
+    document.getElementById('orderTotal').innerHTML=total;
+    document.getElementById('totalCartAmount').innerHTML= total;
+    
     
 
 }

@@ -1,90 +1,5 @@
-let foodproducts = [
-    {
-    "productId":1,
-     "name":"Chicken Wrap",
-     "image":"shawarma_wrap.jpg",
-     "type":"Shawarma",
-     "price":450.00,
-     "ratings":4.7
-
-    },
-    
-    {
-        "productId":2,
-        "name":"Idly [2 Nos]",
-        "image":"Brahmin_cafe.jpg",
-        "type":"South Indian",
-        "price":70.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":3,
-        "name":"Crispy Veg Burger",
-        "image":"mcdonalds.jpg",
-        "type":"Burger,Fast Food",
-        "price":99.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":4,
-        "name":"Hot 'N' Cheezy Burger",
-        "image":"burger_king.jpg",
-        "type":"Burger,Fast Food",
-        "price":199.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":5,
-        "name":"Tofu Veggie Stirfry",
-        "image":"freshmenu.jpg",
-        "type":"Shawarma",
-        "price":133.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":6,
-        "name":"Mysore Pak",
-        "image":"sangamsweets.jpg",
-        "type":"Sweets,Desserts",
-        "price":150.00,
-        "ratings":4.7
-
-    },{
-        "productId":7,
-        "name":"Poori Sabji",
-        "image":"vijayalakshni_veg.jpg",
-        "type":"South Indian,Ch..",
-        "price":150.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":8,
-        "name":"Hot Dum Biryani",
-        "image":"ambur_biryani.jpg",
-        "type":"Biryani",
-        "price":450.00,
-        "ratings":4.7
-
-    },
-    {
-        "productId":9,
-        "name":"Mango Lassi",
-        "image":"Lassi_Shop.jpg",
-        "type":"Beverages,Shake..",
-        "price":450.00,
-        "ratings":4.7
-
-    }
-
-];
-
-let homePageFoodProducts = [];
- 
+let foodproducts =[];
+let homePageFoodProducts = []; 
 let userid = '';
 
 
@@ -153,8 +68,10 @@ function addtocart(foodItem)
 /**
  * function for searching the restraurant filter the restraurants based on seach
  */
- function searchFoodItem(){    
-    
+  async function searchFoodItem(){  
+    const res = await fetch('http://localhost:3000/fooditem');    
+    foodproducts = await res.json();  
+    //alert(JSON.stringify(foodproducts));
     let searchKeyWord = document.getElementById('searchInput').value;
     if(isEmpty(searchKeyWord)){
         homePageFoodProducts = foodproducts;
@@ -300,26 +217,26 @@ function addtocart(foodItem)
  }
  function addCartItemForPayment(){
     sessionStorage.setItem("cartItems",JSON.stringify(cartItem));
+   
  }
- function addFoodItem(){
-    let item = {
-        "productId":10,
-        "name":document.getElementById('foodName').value,
-        "price":document.getElementById('price').value,
-        "type":document.getElementById('cuisineType').value,
-        "image": "shawarma_wrap.jpg",
-        "rating":getRatingValue(document.getElementById('ratings'))
-    }
+ function addFoodItem(){   
     let foodItemarrsession = sessionStorage.getItem("foodItemArr");
     if(foodItemarrsession==undefined||foodItemarrsession==null ||foodItemarrsession=='undefined'){
         sessionStorage.setItem("foodItemArr",foodproducts.stringify);
     }else{
         foodproducts=JSON.parse(foodItemarrsession);
     }
-   
+    let item = {
+        "productId":foodproducts.length,
+        "name":document.getElementById('foodName').value,
+        "price":document.getElementById('price').value,
+        "type":document.getElementById('cuisineType').value,
+        "image": "shawarma_wrap.jpg",
+        "rating":getRatingValue(document.getElementById('ratings'))
+    }
    foodproducts.push(item);
    sessionStorage.setItem("foodItemArr",JSON.stringify(foodproducts));
-   alert(sessionStorage.getItem("foodItemArr"));
+   postAjaxRequest(JSON.stringify(item));
    window.location.href = "/html/home.html";
  }
  function getRatingValue(element){
@@ -337,3 +254,27 @@ function addtocart(foodItem)
     });
     return rating;
  }
+    
+ function postAjaxRequest(data){
+        alert(data);
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+          }
+        };
+        xhttp.open("POST", "http://localhost:3000/fooditem", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(data);
+        console.log('data is sent');
+      
+ }
+ function checkout() {
+    if(cartItem.length!=0){
+        sessionStorage.setItem("cartItems",JSON.stringify(cartItem));
+        window.location.href = "./paymentGateway.html"
+    }else{
+        alert("Add Items To Cart");
+    }
+ }
+ 
+ 

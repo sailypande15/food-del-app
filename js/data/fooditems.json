@@ -1,0 +1,136 @@
+{
+  "fooditem": [
+    {
+      "productId": 1,
+      "name": "Chicken Wrap",
+      "image": "shawarma_wrap.jpg",
+      "type": "Shawarma",
+      "price": 450,
+      "ratings": 4.7
+    },
+    {
+      "productId": 2,
+      "name": "Idly [2 Nos]",
+      "image": "Brahmin_cafe.jpg",
+      "type": "South Indian",
+      "price": 70,
+      "ratings": 4.7
+    },
+    {
+      "productId": 3,
+      "name": "Crispy Veg Burger",
+      "image": "mcdonalds.jpg",
+      "type": "Burger,Fast Food",
+      "price": 99,
+      "ratings": 4.7
+    },
+    {
+      "productId": 4,
+      "name": "Hot 'N' Cheezy Burger",
+      "image": "burger_king.jpg",
+      "type": "Burger,Fast Food",
+      "price": 199,
+      "ratings": 4.7
+    },
+    {
+      "productId": 5,
+      "name": "Tofu Veggie Stirfry",
+      "image": "freshmenu.jpg",
+      "type": "Shawarma",
+      "price": 133,
+      "ratings": 4.7
+    },
+    {
+      "productId": 6,
+      "name": "Mysore Pak",
+      "image": "sangamsweets.jpg",
+      "type": "Sweets,Desserts",
+      "price": 150,
+      "ratings": 4.7
+    },
+    {
+      "productId": 7,
+      "name": "Poori Sabji",
+      "image": "vijayalakshni_veg.jpg",
+      "type": "South Indian,Ch..",
+      "price": 150,
+      "ratings": 4.7
+    },
+    {
+      "productId": 8,
+      "name": "Hot Dum Biryani",
+      "image": "ambur_biryani.jpg",
+      "type": "Biryani",
+      "price": 450,
+      "ratings": 4.7
+    },
+    {
+      "productId": 9,
+      "name": "Mango Lassi",
+      "image": "Lassi_Shop.jpg",
+      "type": "Beverages,Shake..",
+      "price": 450,
+      "ratings": 4.7
+    },
+    {
+      "id": "daf8",
+      "productId": 1,
+      "name": "Pav Bhaji",
+      "price": "250",
+      "type": "North Indian",
+      "image": "shawarma_wrap.jpg",
+      "rating": 5
+    },
+    {
+      "id": "86c1",
+      "productId": 0,
+      "name": "Vada Pav",
+      "price": "50",
+      "type": "Snacks",
+      "image": "shawarma_wrap.jpg",
+      "rating": 4
+    }
+  ],
+  "users": [
+    {
+      "userid": "test1@gmail.com",
+      "password": "abcd1234",
+      "address": "",
+      "role": "admin",
+      "fname": "test1",
+      "lname": ""
+    },
+    {
+      "userid": "test2@gmail.com",
+      "password": "password",
+      "address": "",
+      "role": "",
+      "fname": "test2",
+      "lname": ""
+    },
+    {
+      "userid": "test3@gmail.com",
+      "password": "password",
+      "address": "",
+      "role": "",
+      "fname": "test3",
+      "lname": ""
+    },
+    {
+      "userid": "test4@gmail.com",
+      "password": "password",
+      "address": "",
+      "role": "admin",
+      "fname": "test4",
+      "lname": ""
+    },
+    {
+      "userid": "saily.pande@gmail.com",
+      "password": "abcd1234",
+      "address": "",
+      "role": "admin",
+      "fname": "test4",
+      "lname": ""
+    }
+  ]
+}

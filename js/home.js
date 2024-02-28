@@ -232,7 +232,7 @@ function addtocart(foodItem)
         "price":document.getElementById('price').value,
         "type":document.getElementById('cuisineType').value,
         "image": "shawarma_wrap.jpg",
-        "rating":getRatingValue(document.getElementById('ratings'))
+        "ratings":getRatingValue(document.getElementById('ratings'))
     }
    foodproducts.push(item);
    sessionStorage.setItem("foodItemArr",JSON.stringify(foodproducts));
@@ -248,15 +248,13 @@ function addtocart(foodItem)
         if(span.className.includes("checked")){
 
                 rating++;
-        }
-        
+        }      
     
     });
     return rating;
  }
     
  function postAjaxRequest(data){
-        alert(data);
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
